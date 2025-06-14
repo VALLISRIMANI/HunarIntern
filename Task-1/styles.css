@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121222;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.6;
+  margin: 0;
+}
+header{
+  width: 100%;
+  text-align: center;
+  padding: 15px 15px;
+  background-color: #121222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+header h1{
+  font-size: 2vw;
+  background: linear-gradient(to right, #60aefb, #ec1e2f);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out;
+}
+header h1:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  cursor:pointer;
+}
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #1a1a2e;
+  min-height: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
+}
+nav.sidebar {
+  width: 25%;
+  background-color: #121222;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+nav.sidebar li {
+  margin: 12px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+  text-align: left;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #fff;
+  position: sticky;
+}
+nav.sidebar li:hover {
+  color: #ff6b81;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+strong {
+  color: #ff6b81;
+}
+ul {
+  padding-left: 25px;
+}
+ul li {
+  margin-bottom: 10px;
+  color: #ff6b81;
+}
+ul li::marker {
+  color: #ff6b81;
+}
+.content {
+  width: 70%;
+  padding: 40px 5px 20px 40px;
+  overflow-y: auto;
+}
+.about-menu {
+  text-align:left; 
+  padding-top: 80px;
+  font-size: x-large;
+}
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+.about-image {
+  flex-shrink: 0;
+}
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.section {
+  display: none;
+  padding-bottom: 10px;
+  min-height: 300px;
+  margin-bottom: 30px;
+}
+.section.active {
+  display: block;
+  animation: fadeIn 0.6s ease-in-out;
+}
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 18px;
+  background: linear-gradient(to right, #60aefb, #ec1e2f);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 10px;
+  font-size: 1.02rem;
+}
+.project-list {
+  padding-left: 20px;
+}
+.project-desc, .project-list ol, .project-list li {
+  color: white;
+}
+.project-features {
+  margin-top: 10px;
+  padding-left: 40px;
+  list-style:square inside;
+}
+.project-features li::marker {
+  color: white;
+}
+.profile-link {
+  display: inline-block;
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.profile-link:hover {
+  color: #60aefb;
+  text-decoration: underline;
+}
+.address-text {
+  color: white;
+}
+.address-text:hover {
+  text-decoration: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #121222;
+  margin-top: auto;
+}
+footer:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+footer h4 {
+  font-size: 1rem;
+  color: #ded7d7;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 6vw;
+  }
+  .container {
+    flex-direction: column;
+    width: 95%;
+    margin: 20px;
+  }
+  nav.sidebar {
+    width: 100%;
+    text-align: center;
+  }
+  nav.sidebar li {
+    display: inline-block;
+    margin: 8px 12px;
+    font-size: 1rem;
+    list-style-type: none;;
+  }
+  .content {
+    width: 100%;
+    align-items: center;
+    padding: 25px;
+  }
+  .profile-img {
+    margin: auto;
+  }
+}

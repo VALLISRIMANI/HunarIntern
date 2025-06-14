@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valli | Personal Homepage</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1><span>PORTFOLIO | VALLISRIMANI</span></h1>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('education')">Education</li>
+        <li onclick="showSection('skills')">Skills</li>
+        <li onclick="showSection('projects')">Projects</li>
+        <li onclick="showSection('certifications')">Certifications</li>
+        <li onclick="showSection('profiles')">Profiles</li>
+        <li onclick="showSection('contact')">Contact</li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <section id="welcome-screen" class="section active">
+        <h2>Welcome 🎉 to My Personal Homepage</h2>
+        <p class="about-menu">Click a menu item to explore more about me!</p>
+      </section>
+
+      <section id="home" class="section">
+        <h2>About Me</h2>
+        <div class="about-wrapper">
+          <div class="about-text">
+            <p>Hello, I'm <strong>Vallisrimani Gudapati.</strong><br><br> 3rd Year Computer Science Student | Aspiring Web Developer.<br> I love solving real-world problems using tech and building useful platforms.</p>
+          </div>
+          <div class="about-image">
+            <img src="profile.jpg" alt="Profile Photo" class="profile-img"/>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>BTech : Computer Science and Engineering </strong><br></li>
+          <p>Sri Vasavi Engineering College, Peddtadepalli <br> CGPA: 9.28 | 2023–2027</p>
+          <li><strong>Intermediate  : MPC</strong><br></li>
+          <p>Sri Chaitanya Junior College, Tadepalligudem<br>Percentage: 95% | 2021–2023</p>
+          <li><strong>SSC:</strong><br></li>
+          <p> Z.P.P. High School, Kommugudem<br>Percentage: 95% | 2016–2021</p>
+        </ul>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>C, Java, Python</strong></li>
+          <p>I have basic knowledge in object-oriented and procedural programming using these languages.</p>
+          <li><strong>HTML, CSS, JavaScript</strong></li>
+          <p>I use these technologies to build responsive and interactive web pages.</p>
+          <li><strong>VS Code, GitHub, MongoDB Atlas</strong></li>
+          <p>I work with tools and platforms that support development, version control, and cloud databases.</p>
+        </ul>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <ul class="project-list">
+          <li>
+            <strong>Destination Stays</strong><br>
+            <span class="project-desc"> A full-fledged hotel room booking system built using Python and Tkinter. It allows users to:</span>
+            <ol class="project-features">
+              <li>Select hotels based on state, city, and rating</li>
+              <li>Choose room types (AC/Non-AC) and dates</li>
+              <li>Book rooms with payment and save user-specific details</li>
+              <li>Responsive GUI with visual feedback and data persistence</li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+
+      <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li><strong>Google Android Developer Virtual Internship</strong></li>
+          <p>From AICTE (Eduskills)</p>
+          <li><strong>Java Full Stack Developer Virtual Internship</strong></li>
+          <p>From AICTE (Eduskills)</p>
+          <li><strong>Introduction to Internet of Things</strong></li>
+          <p>From NPTEL (Swayam)</p>
+          <li><strong>Privacy and Security in Online Social Media</strong></li>
+          <p>From NPTEL (Swayam)</p>
+        </ul>
+      </section>
+
+      <section id="profiles" class="section">
+        <h2>Profiles</h2>
+        <ul>
+          <li><strong>GitHub:</strong>
+            <a href="https://github.com/VALLISRIMANI" target="_blank" class="profile-link">View My GitHub Projects</a>
+          </li>
+          <li><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/vallisrimani-gudapati-ba7a872a7" target="_blank" class="profile-link">Connect on LinkedIn</a>
+          </li>
+          <li><strong>Microsoft Learn:</strong>
+            <a href="https://learn.microsoft.com/en-us/users/manigudapati-1365/" target="_blank" class="profile-link">Explore My Microsoft Learn Profile</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <ul>
+          <li><strong>Email:</strong> 
+            <a href="mailto:manigudapati61@gmail.com" class="profile-link">manigudapati61@gmail.com</a>
+          </li>
+          <li><strong>Outlook:</strong> 
+            <a href="mailto:23a81a0522@sves.org.in" class="profile-link">23a81a0522@sves.org.in</a>
+          </li>
+          <li><strong>Address:</strong>
+            <a class="address-text">Tadepalligudem, West Godavari, Andhra Pradesh</a>
+          </li>
+          <li><strong>Location:</strong>
+            <a href="https://www.google.com/maps/place/Tadepalligudem,+Andhra+Pradesh" target="_blank" class="profile-link">View on Google Maps</a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <h4><span>&copy; 2025 Vallisrimani Gudapati | All rights reserved.</span></h4>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll(".section").forEach((section) =>
+        section.classList.remove("active")
+      );
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

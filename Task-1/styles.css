@@ -28,7 +28,6 @@ header:hover {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.3s ease-in-out;
 }
-
 header h1{
   font-size: 2vw;
   background: linear-gradient(to right, #60aefb, #ec1e2f);
@@ -134,7 +133,7 @@ ul li::marker {
 }
 .section {
   display: none;
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   min-height: 300px;
   margin-bottom: 30px;
 }

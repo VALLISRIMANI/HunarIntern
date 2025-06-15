@@ -74,7 +74,7 @@ nav.sidebar ul {
 nav.sidebar li {
   margin: 12px 0;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 2rem;
   transition: all 0.3s;
   text-align: left;
   padding: 10px 16px;
@@ -151,7 +151,7 @@ h2 {
 }
 p {
   margin-bottom: 10px;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
 }
 .project-list {
   padding-left: 20px;

@@ -48,8 +48,7 @@ header h1:hover {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 30px auto;
-  width: 90%;
-  max-width: 1000px;
+  width: min(90%, 1000px);
   border-radius: 15px;
   overflow: hidden;
   background-color: #1a1a2e;

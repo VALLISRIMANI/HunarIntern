@@ -183,6 +183,7 @@ header {
 .benefit {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 1.4rem;
   flex: 1 1 200px;
@@ -669,7 +670,7 @@ footer span {
   }
 
   .benefit {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .our-story p {
@@ -725,7 +726,7 @@ footer span {
     font-size: 2.2rem;
   }
 
-  .hero p, .courses-intro, .benefit {
+  .hero p, .courses-intro {
     font-size: 1.2rem;
   } 
   
@@ -804,16 +805,12 @@ footer span {
   }
 
   .hero p, .courses-intro, .benefit  {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .benefits-grid {
     align-items: center;
     gap: 10px;
-  }
-
-  .benefit {
-    font-size: 1.1rem;
   }
 
   .cta-button {

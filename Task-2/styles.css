@@ -7,6 +7,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 body, main {
@@ -494,7 +495,6 @@ legend {
   box-shadow: 0 8px 16px rgba(51, 51, 102, 0.6);
 }
 
-
 .dashboard-card p {
   margin: 10px 0;
   line-height: 1.5;
@@ -557,7 +557,7 @@ legend {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 50px;
+  margin: 80px auto 50px;
 }
 
 .contact-item {
@@ -643,19 +643,22 @@ footer span {
   .nav-items  {
     font-size: 1.1rem;
   }
-
-  
 }
 
 @media only screen and (max-width: 1140px) {
   .header-wrapper {
-    padding: 10px 5px;
+    padding: 10px 0;
+  }
+
+  .logo-title {
+    padding-bottom: 8px;
   }
 
   .fa-brain {
     font-size: 1.8rem;
     margin-right: 10px;
   }
+
   .title {
     margin-right: 90px;
     font-size: 1.8rem;
@@ -667,13 +670,20 @@ footer span {
 
   .benefit {
     font-size: 1.2rem;
-    flex: 1 1 150px;
   }
 
   .our-story p {
     font-size: 1.25rem;
     line-height: 1.8;
     margin: 20px 40px;
+  }
+  
+  .contact-item {
+    font-size: 1.5rem;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
   }
 }
 
@@ -696,7 +706,7 @@ footer span {
   .nav-bar {
     display: none;
     flex-direction: column;
-    width: 98%;
+    width: 94%;
   }
 
   .nav-bar.show {
@@ -704,6 +714,7 @@ footer span {
   }
 
   .nav-items {
+    margin-left: 10px;
     padding: 10px 0 0 ;
     width: 100%;
     text-align: left;
@@ -724,7 +735,7 @@ footer span {
   
   .benefit {
     font-size: 1.2rem;
-    flex: 1 1 150px;
+    flex: 1 1 200px;
   }
 
   .cta-button {
@@ -762,14 +773,6 @@ footer span {
     font-size: 1.2rem;
     line-height: 1.8;
     margin: 20px 40px;
-  }
-
-  .contact-item {
-    font-size: 1.5rem;
-  }
-
-  .contact-item i {
-    font-size: 1.2rem;
   }
 
   footer {
@@ -811,7 +814,6 @@ footer span {
 
   .benefit {
     font-size: 1.1rem;
-    flex: 1 1 100px;
   }
 
   .cta-button {
@@ -835,21 +837,34 @@ footer span {
     font-size: 1.1rem;
   }
 
-  .enroll-form, .toast  {
+  .enroll-form  {
     max-width: 400px;
+  }
+
+  .toast {
+    max-width: 350px;
   }
 
   .add-course {
     margin-left: 20px;
   }
 
+  .dashboard-grid {
+    padding: 20px 5px 0;
+  }
+
+  .contact-icons {
+    margin: 100px auto;
+  }
+
   .contact-item {
-    font-size: 1.5;
+    font-size: 1.2rem;
   }
 
   .contact-item i {
-    font-size: 1.2;
+    font-size: 0.9rem;
   }
+
   footer {
     flex-direction: column;
     text-align: center;

@@ -1,0 +1,102 @@
+[
+    {
+        "title": "The Great Indian Kapil Show",
+        "year": "2025",
+        "rating": "U/A 13+",
+        "type": "Show",
+        "genres": ["Talk Shows", "Comedies", "Variety TV"],
+        "poster": "images/The-Great-Indian-Kapil-Show.jpg",
+        "plot": "Comedian Kapil Sharma hosts this laugh-out-loud variety talk show with celebrity guests, hilarious antics and his signature supporting cast.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=cBq8snuvTds"
+    },
+    {
+        "title": "JAAT",
+        "year": "2025",
+        "rating": "U/A 16+",
+        "type": "Movie",
+        "genres": ["Action"],
+        "poster": "images/JAAT.jpg",
+        "plot": "A mysterious stranger journeys to a remote town controlled by a callous crime lord, with one violent mission — restoring justice to its people.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=zKHvaG-XXOc"
+    },
+    {
+        "title": "HIT: The Third Case",
+        "year": "2025",
+        "rating": "A",
+        "type": "Movie",
+        "genres": ["Thrillers"],
+        "poster": "images/HIT.jpg",
+        "plot": "The Homicide Intervention Team (HIT) sends ruthless police officer Arjun Sarkaar to find a group of killers and stop their grisly murder spree.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=kAtfaaUgDRU"
+    },
+    {
+        "title": "Rana Naidu",
+        "year": "2025",
+        "rating": "A",
+        "type": "Show",
+        "genres": ["Thrillers", "Dramas"],
+        "poster": "images/Rana-Naidu.jpg",
+        "plot": "Rana Naidu is the go-to problem solver for the rich and famous. But when his father is released from jail, the one mess he can't handle may be his own.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=7OO5uGvNZpM"
+    },
+    {
+        "title": "The Royals",
+        "year": "2025",
+        "rating": "A",
+        "type": "Show",
+        "genres": ["Comedies", "Romance", "Dramas"],
+        "poster": "images/The-Royals.jpg",
+        "plot": "When charming Prince Aviraaj meets Sophia, a self-made girl boss, the worlds of royalty and startups collide in a whirlwind of romance and ambition.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=YV7FN78Dwxo"
+    },
+    {
+        "title": "Chaava",
+        "year": "2025",
+        "rating": "U/A 16+",
+        "type": "Movie",
+        "genres": ["Action", "Dramas"],
+        "poster": "images/CHAAVA.jpg",
+        "plot": "After the death of his father, warrior-king Sambhaji Maharaj battles Mughal forces led by Aurangzeb to keep the Maratha Empire alive.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=hs3w32RG8L8"
+    },
+    {
+        "title": "Retro",
+        "year": "2025",
+        "rating": "U/A 16+",
+        "type": "Movie",
+        "genres": ["Action", "Dramas"],
+        "poster": "images/RETRO.jpg",
+        "plot": "Raised by a criminal father, Paari leaves behind his adoptive family to build a quiet life with his love, Rukmini. But his violent past won't let him go.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=986VgJ9lLKw"
+    },
+    {
+        "title": "Sikandar",
+        "year": "2025",
+        "rating": "U/A 13+",
+        "type": "Movie",
+        "genres": ["Action", "Dramas"],
+        "poster": "images/SIKANDAR.jpg",
+        "plot": "A tragic accident pushes the powerful Sikandar to protect the less fortunate by standing up to corruption and greed — using any means necessary.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=BAk5ZCoTWY8"
+    },
+    {
+        "title": "The Diplomat",
+        "year": "2025",
+        "rating": "U/A 16+",
+        "type": "Movie",
+        "genres": ["Dramas"],
+        "poster": "images/The-Diplomat.jpg",
+        "plot": "An Indian diplomat maneuvers political and moral tensions to free a young woman claiming forced marriage in Pakistan. Based on true events.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=lV6sJlBbhPs"
+    },
+    {
+        "title": "K-Pop Demon Hunters",
+        "year": "2024",
+        "rating": "A",
+        "type": "Show",
+        "genres": ["Thrillers", "Dramas"],
+        "poster": "images/kpop-demon-hunters.jpg",
+        "plot": "Cash-strapped K-pop stars secretly moonlight as demon hunters to protect the world from darkness — while keeping up appearances on stage.",
+        "youtube_trailer": "https://www.youtube.com/watch?v=AzCAwdp1uIQ"
+    }
+]

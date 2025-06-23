@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="netflix-title-animation" id="logoContainer">
+        <div class="netflix-title">
+            <img src="images/logo.png" alt="Netflix logo" class="netflix-logo-animation">
+        </div>
+    </div>
+
+    <div class="netflix-signin" id="signInContainer">
+
+        <div class="header-container">
+            <header>
+                <div class="header-title1">
+                    <div class="header-title2">
+                        <div class="nav-title">
+                            <img src="images/logo.png" alt="Logo" class="logo">
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="form-container">
+                <div class="form-box">    
+                    <form>
+                        <div class="sign-in"><h1>Sign In</h1></div>
+
+                        <div class="email-box">
+                            <div class="floating-label-container">
+                                <input type="email" id="email" class="floating-input" placeholder=" "/>
+                                <label for="email" class="floating-label">Email or mobile number</label>
+                            </div>
+                            <p class="error-message" id="emailErrorMessage"></p>
+                        </div>
+
+                        <div class="password-box">
+                            <div class="floating-label-container">
+                                <input type="password" id="password" class="floating-input" placeholder=" "/>
+                                <label for="password" class="floating-label">Password</label>
+                            </div>
+                            <p class="error-message" id="passwordeErrorMessage"></p>
+                        </div>
+
+                        <button type="submit" class="btn submit-btn">Sign In</button>
+
+                        <p class="or">OR</p>
+
+                        <button type="button" class="btn code-btn">Use a sign‑in code</button>
+
+                        <a class="forgot">Forgot password?</a>
+
+                        <div class="remember-me">
+                            <input type="checkbox" class="checkbox"/>
+                            <label class="remember"> Remember me </label>
+                        </div>
+
+                        <div class="sign-up">
+                            <span class="signup">New to Netflix? <a onclick="openContainer('moviesContainer')">Sign up now.</a></span>
+                        </div>
+                        
+                        <div class="captcha">
+                            <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a>Learn more.</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="netflix-movies" id="moviesContainer">
+        <div class="movies-header-container">
+            <header class="movies-header">
+                <nav class="navbar">
+
+                    <div class="navbar-title">
+                    <img src="images/logo.png" alt="netflix-logo" class="netflix-logo">
+                    </div>
+
+                    <div class="nav-items">
+                        <div class="languages">
+                            <select >
+                            <option value="english" selected>English</option>
+                            <option value="hindi">हिन्दी</option>
+                            </select>
+                        </div>
+                        <div class="nav-sign-in">
+                            <button class="sign-in-btn" onclick="openContainer('signInContainer')">Sign In</button>
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Unlimited movies, TV shows and more</h1>
+                <p class="hero-subtitle">Starts at ₹149. Cancel at any time.</p>
+            </div>
+
+            <p class="hero-details">Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div class="hero-form">
+                <div class="input-wrapper">
+                    <div class="hero-floating-label-container">
+                        <input type="email" class="hero-email-input" placeholder=" " required autocomplete="off"/>
+                        <label class="hero-floating-label">Email address</label>
+                    </div>
+                    <p class="hero-error-message"></p>
+                </div>
+                <button class="hero-start-button" onclick="heroErrorCheck(event)">Get Started ></button>
+            </div>
+        </div>
+
+        <div class="netflix-movies-container">
+            <div class="netflix-arc-wrapper">
+                <svg viewBox="0 0 1920 20" preserveAspectRatio="none" class="netflix-arc-svg">
+                    <defs>
+                        <linearGradient id="netflixArcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="5%" stop-color="#4403a6;" />
+                            <stop offset="15%" stop-color="#B82869" />
+                            <stop offset="50%" stop-color="#E50914" />
+                            <stop offset="85%" stop-color="#B82869" />
+                            <stop offset="95%" stop-color="#4403a6;" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M0,20 Q960,10 1920,20 L1920,0 L0,0 Z" fill="url(#netflixArcGradient)" />
+                </svg>
+            </div>
+
+            <div class="netflix-carousel-container">
+                <h2 class="section-title">Trending Now</h2>
+
+                <div class="carousel-wrapper">
+                    <button class="scroll-arrow left hidden" id="scroll-left">◀</button>
+
+                    <div class="movies-scroll-wrapper" id="scroll-container">
+                        <div class="movie-card"><img src="images/movie-1.jpg" /><div class="movie-number">1</div></div>
+                        <div class="movie-card"><img src="images/movie-2.jpg" /><div class="movie-number">2</div></div>
+                        <div class="movie-card"><img src="images/movie-3.jpg" /><div class="movie-number">3</div></div>
+                        <div class="movie-card"><img src="images/movie-4.jpg" /><div class="movie-number">4</div></div>
+                        <div class="movie-card"><img src="images/movie-5.jpg" /><div class="movie-number">5</div></div>
+                        <div class="movie-card"><img src="images/movie-6.jpg" /><div class="movie-number">6</div></div>
+                        <div class="movie-card"><img src="images/movie-7.jpg" /><div class="movie-number">7</div></div>
+                        <div class="movie-card"><img src="images/movie-8.jpg" /><div class="movie-number">8</div></div>
+                        <div class="movie-card"><img src="images/movie-9.jpg" /><div class="movie-number">9</div></div>
+                        <div class="movie-card"><img src="images/movie-10.jpg" /><div class="movie-number">10</div></div>
+                    </div>
+
+                    <button class="scroll-arrow right" id="scroll-right">▶</button>
+
+                    <div class="movies-details-overlay" id="movieDetails" style="display: none;">
+                        <button id="closeDetails" class="close-details">&times;</button>
+
+                        <div class="details-content">
+                            <div class="details-image">
+                                <img id="detailPoster" src="" alt="Movie Poster">
+                            </div>
+
+                            <div class="details-info">
+                                <ul id="movieMeta"></ul>
+                                <p id="moviePlot"></p>
+                                <button id="watchButton">Watch</button>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div id="videoModal" class="video-modal" style="display: none;">
+                        <span id="closeVideo">X</span>
+                        <iframe id="videoPlayer" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+                    </div>
+                </div> 
+
+                <h2 class="reasons-title">More reasons to join</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <h3>Enjoy on your TV</h3>
+                        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                        <img src="images/computer.png" alt="computer" class="reason-icon">
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Download your shows to watch offline</h3>
+                        <p>Save your favourites easily and always have something to watch.</p>
+                        <img src="images/download.png" alt="download" class="reason-icon">
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Watch everywhere</h3>
+                        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                        <img src="images/telescope.png" alt="telescope" class="reason-icon">
+                    </div>
+
+                    <div class="reason-card">
+                        <h3>Create profiles for kids</h3>
+                        <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                        <img src="images/twocards.png" alt="cards" class="reason-icon">
+                    </div>
+                </div>
+
+                <h2 class="questions-title">Frequently Asked Questions</h2>
+                <div class="questions-grid">
+
+                    <button class="first question" onclick="displayAnswer('first-answer')">What is Netflix?</button>
+                    <div class="first answer" id="first-answer">
+                        <span>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.<br><br>
+                        You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</span>
+                    </div>
+
+                    <button class="second question" onclick="displayAnswer('second-answer')">How much does Netflix cost?</button>
+                    <div class="second answer" id="second-answer">
+                        <span>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</span>
+                    </div>
+
+                    <button class="third question" onclick="displayAnswer('third-answer')">Where can I watch?</button>
+                    <div class="third answer" id="third-answer">
+                        <span>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<br><br>  
+                        You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</span>
+                    </div>
+
+                    <button class="fourth question" onclick="displayAnswer('fourth-answer')">How do I cancel?</button>
+                    <div class="fourth answer" id="fourth-answer">
+                        <span>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</span>
+                    </div>
+
+                    <button class="fifth question" onclick="displayAnswer('fifth-answer')">What can I watch on Netflix?</button>
+                    <div class="fifth answer" id="fifth-answer">
+                        <span>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</span>
+                    </div>
+
+                    <button class="sixth question" onclick="displayAnswer('sixth-answer')">Is Netflix good for kids?</button>
+                    <div class="sixth answer" id="sixth-answer">
+                        <span>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.<br><br>
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</span>
+                    </div>
+                </div>
+
+                <div class="bottom-hero-form">
+                    <p class="hero-details">Ready to watch? Enter your email to create or restart your membership.</p>
+
+                    <div class="hero-form">
+                        <div class="input-wrapper">
+                            <div class="hero-floating-label-container">
+                                <input type="email" class="hero-email-input" placeholder=" " required autocomplete="off"/>
+                                <label class="hero-floating-label">Email address</label>
+                            </div>
+                            <p class="hero-error-message"></p>
+                        </div>
+                        <button class="hero-start-button" onclick="heroErrorCheck(event)">Get Started ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="netflix-sharedFooter" id="sharedFooter">
+        <div class="footer-container">
+            <footer class="footer-content">
+                <div class="footer-contact">
+                    <p>Questions? <a href="tel:0008009191743">Call 000‑800‑919‑1743 (Toll‑Free)</a></p>
+                </div>
+
+                <div class="footer-links">
+                    <ul class="footer-column">
+                        <li><a>FAQ</a></li>
+                        <li><a>Investor Relations</a></li>
+                        <li><a>Privacy</a></li>
+                        <li><a>Speed Test</a></li>
+                    </ul>
+                    <ul class="footer-column">
+                        <li><a>Help Centre</a></li>
+                        <li><a>Jobs</a></li>
+                        <li><a>Cookie Preferences</a></li>
+                        <li><a>Legal Notices</a></li>
+                    </ul>
+                    <ul class="footer-column">
+                        <li><a>Account</a></li>
+                        <li><a>Ways to Watch</a></li>
+                        <li><a>Corporate Information</a></li>
+                        <li><a>Only on Netflix</a></li>
+                    </ul>
+                    <ul class="footer-column">
+                        <li><a>Media Centre</a></li>
+                        <li><a>Terms of Use</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer languages">
+                    <select>
+                        <option selected>English</option>
+                        <option>हिन्दी</option>
+                    </select>
+                </div>
+
+                <p class="footer-location">Netflix India</p>
+                <p class="footer-disclaimer">This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                <a>Learn more.</a></p>
+            </footer>  
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

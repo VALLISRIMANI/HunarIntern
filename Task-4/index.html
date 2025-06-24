@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMI Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header-wrapper">
+    <h1>Body Mass Index (BMI) Calculator</h1>
+    <span class="icon" id="infoToggle" title="Click to view detailed BMI info">ℹ️</span>
+  </div>
+
+  <div class="bmi-calculator-container">
+    <h1>Standards ⬇ </h1>
+    <div class="tab-buttons">
+      <button id="metricTab" class="active">Metric Units</button>
+      <button id="otherTab">US Units</button>
+    </div>
+
+    <div class="tab-content">
+      <form id="bmiForm">
+        <div class="form-group">
+          <label for="height">Height (<span id="heightUnit">cm</span>):</label>
+          <input type="number" id="height" name="height" step="0.1" placeholder="Enter height" required>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (<span id="weightUnit">kg</span>):</label>
+          <input type="number" id="weight" name="weight" step="0.1" placeholder="Enter weight" required>
+        </div>
+        <button type="submit">Calculate</button>
+      </form>
+    </div>
+
+    <div id="results" class="results">
+      <h2>Your BMI Results</h2>
+      <p><strong>BMI:</strong> <span id="bmiValue">-</span></p>
+      <p><strong>Category:</strong> <span id="bmiCategory">-</span></p>
+      <p><strong>BMI Prime:</strong> <span id="bmiPrime">-</span></p>
+      <p><strong>Ponderal Index:</strong> <span id="ponderalIndex">-</span></p>
+    </div>
+
+    <div id="measures" class="measures">
+      <h2>Recommended Health Tips</h2>
+      <div id="adviceList"></div>
+
+      <h2>Potential Health Risks</h2>
+      <div id="healthIssues"></div>
+    </div>
+  </div>
+
+  <div class="bmi-info-container" id="bmiInfo">
+    <h3>BMI Information: </h3>
+    <p>This section provides detailed information about Body Mass Index (BMI), its calculation, categories, and health implications.</p>
+    <section>
+      <h2>What is BMI?</h2>
+      <p><strong>Body Mass Index (BMI)</strong> is a measure that helps assess whether a person has a healthy body weight relative to their height. It is widely used to screen for weight categories that may lead to health problems.</p>
+    </section>
+
+    <section>
+      <h2>How is BMI Calculated?</h2>
+      <p><strong>Metric Formula:</strong> BMI = weight (kg) / height² (m²)</p>
+      <p><strong>US Units Formula:</strong> BMI = (703 × weight (lbs)) / height² (in²)</p>
+      <p><strong>Example:</strong> A 160 lb person with a height of 5'10" (70 in) → BMI = (703 × 160) / (70²) = 23.0</p>
+    </section>
+
+    <section>
+      <h2>BMI Categories for Adults (Age 20+)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Classification</th>
+            <th>BMI (kg/m²)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Severe Thinness</td><td>&lt; 16</td></tr>
+          <tr><td>Moderate Thinness</td><td>16 – 17</td></tr>
+          <tr><td>Mild Thinness</td><td>17 – 18.5</td></tr>
+          <tr><td>Normal</td><td>18.5 – 25</td></tr>
+          <tr><td>Overweight</td><td>25 – 30</td></tr>
+          <tr><td>Obese Class I</td><td>30 – 35</td></tr>
+          <tr><td>Obese Class II</td><td>35 – 40</td></tr>
+          <tr><td>Obese Class III</td><td>&gt; 40</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>BMI for Children and Teens (Age 2–20)</h2>
+      <p>Children and teens use percentiles instead of fixed ranges:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Percentile Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Underweight</td><td>&lt; 5%</td></tr>
+          <tr><td>Healthy Weight</td><td>5% – 85%</td></tr>
+          <tr><td>At Risk of Overweight</td><td>85% – 95%</td></tr>
+          <tr><td>Overweight</td><td>&gt; 95%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Health Risks of Being Overweight</h2>
+      <ul>
+        <li>High blood pressure</li>
+        <li>Unhealthy cholesterol levels</li>
+        <li>Type 2 diabetes</li>
+        <li>Heart disease and stroke</li>
+        <li>Gallbladder disease</li>
+        <li>Osteoarthritis</li>
+        <li>Sleep apnea</li>
+        <li>Certain cancers (e.g. breast, colon)</li>
+        <li>Depression and anxiety</li>
+        <li>Reduced quality of life</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Health Risks of Being Underweight</h2>
+      <ul>
+        <li>Malnutrition and anemia</li>
+        <li>Osteoporosis</li>
+        <li>Weakened immune system</li>
+        <li>Developmental issues in youth</li>
+        <li>Fertility problems in women</li>
+        <li>Increased surgical risk</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Limitations of BMI</h2>
+      <p>While useful, BMI does not account for muscle mass, bone density, and fat distribution. It may misclassify muscular individuals as overweight and underestimate fat in sedentary individuals.</p>
+      <ul>
+        <li>Athletes may have high BMI due to muscle</li>
+        <li>Older adults tend to have more body fat</li>
+        <li>Women generally have higher fat content than men at the same BMI</li>
+        <li>Ethnic and age factors affect BMI accuracy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What is BMI Prime?</h2>
+      <p><strong>BMI Prime</strong> is the ratio of a person's BMI to the upper limit of the normal range (25 kg/m²).</p>
+      <p><strong>Formula:</strong> BMI Prime = BMI / 25</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Classification</th>
+            <th>BMI</th>
+            <th>BMI Prime</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Severe Thinness</td><td>&lt; 16</td><td>&lt; 0.64</td></tr>
+          <tr><td>Moderate Thinness</td><td>16 – 17</td><td>0.64 – 0.68</td></tr>
+          <tr><td>Mild Thinness</td><td>17 – 18.5</td><td>0.68 – 0.74</td></tr>
+          <tr><td>Normal</td><td>18.5 – 25</td><td>0.74 – 1.0</td></tr>
+          <tr><td>Overweight</td><td>25 – 30</td><td>1.0 – 1.2</td></tr>
+          <tr><td>Obese Class I</td><td>30 – 35</td><td>1.2 – 1.4</td></tr>
+          <tr><td>Obese Class II</td><td>35 – 40</td><td>1.4 – 1.6</td></tr>
+          <tr><td>Obese Class III</td><td>&gt; 40</td><td>&gt; 1.6</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>What is the Ponderal Index?</h2>
+      <p><strong>Ponderal Index (PI)</strong> is similar to BMI but uses height cubed instead of squared. It is more accurate for very tall or short individuals.</p>
+      <p><strong>US Formula:</strong> PI = height (in) / ∛mass (lbs)</p>
+      <p><strong>Metric Formula:</strong> PI = mass (kg) / height³ (m³)</p>
+      <p><strong>Example:</strong> A person who is 70 inches tall and weighs 160 lbs → PI = 70 / ∛160 = 12.9</p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Webpage Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-section">
+      <div class="left-img">
+        <img src="phone.png" alt="Phone Mockup" />
+      </div>
+      <div class="about">
+        <h1>About Us</h1>
+        <h6>Sample Headline</h6>
+        <p>
+          Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led. Oh feel if up to till like.
+        </p>
+        <i>Image from <u>Freepik</u></i>
+        <button><span>CONTACT US</span></button>
+      </div>
+    </div>
+
+    <div class="contact-boxes">
+      <div class="contact-box">
+        <h3><i class="fas fa-phone-alt"></i> CALL US</h3>
+        <p>1 (234) 567-891<br>1 (234) 987-654</p>
+      </div>
+      <div class="contact-box">
+        <h3><i class="fas fa-map-marker-alt"></i> LOCATION</h3>
+        <p>121 Rock Street, 21 Avenue New York, NY 92103-9000</p>
+      </div>
+      <div class="contact-box">
+        <h3><i class="fas fa-clock"></i> HOURS</h3>
+        <p>Mon–Fri ….. 11 am – 8 pm<br>Sat, Sun ….. 6 am – 8 pm</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea placeholder="Your Message" rows="4" required></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("contactModal");
+    const contactBtn = document.querySelector(".about button");
+    const closeBtn = document.querySelector(".close-btn");
+
+    contactBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    const contactForm = document.getElementById("contactForm");
+    contactForm.addEventListener("submit", function(e) {
+      e.preventDefault(); 
+      alert("Thank you for contacting us!");
+      modal.style.display = "none"; 
+      contactForm.reset(); 
+    });
+  </script>
+
+</body>
+</html>

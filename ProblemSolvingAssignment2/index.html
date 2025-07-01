@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumble Fitness Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="head">
+            <div class="left">
+                <img src="https://i.postimg.cc/QdR1bPct/logo2.png" alt="Dumble Fitness Club" />
+                <div>Fitness Club</div>
+            </div>
+
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a class="active" onclick="displayContent('home')">Home</a></li>
+                    <li><a onclick="displayContent('calculator')">Fitness Calculator</a></li>
+                    <li><a onclick="displayContent('about')">About Us</a></li>
+                    <li><a onclick="displayContent('contact')">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <button class="btn" onclick="openModal('call')">Call Us Now</button>
+                <button class="btn" onclick="openModal('email')">Email Us</button>
+            </div>
+
+            <div id="contactModal" class="modal">
+                <div class="modal-content" id="modalContent">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <h2>Contact Us</h2>  
+                    <p id="modalMessage"></p>    
+                </div>
+            </div>
+        </header>
+
+        <div class="content home active">
+            <h1>Join the best GYM of Vasai now!</h1>
+            <form onsubmit="event.preventDefault(); submitForm();">
+                <div class="formgroup">
+                    <input type="text" placeholder="Enter Name" />
+                </div>
+                <div class="formgroup">
+                    <input type="text" placeholder="Enter Age" />
+                </div>
+                <div class="formgroup">
+                    <input type="text" placeholder="Enter Gender" />
+                </div>
+                <div class="formgroup">
+                    <input type="text" placeholder="Enter Your Locality" />
+                </div>
+                <button class="btn submit" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="content calculator">
+            <h1>Fitness Calculator</h1>
+            <p>Calculate your Body Mass Index (BMI):</p>
+            <form onsubmit="event.preventDefault(); calculateBMI();">
+                <div class="formgroup">
+                    <input type="number" id="height" placeholder="Enter height in cm" required />
+                </div>
+                <div class="formgroup">
+                    <input type="number" id="weight" placeholder="Enter weight in kg" required />
+                </div>
+                <button class="btn submit">Calculate</button>
+                <p id="bmi-result" style="text-align:center; font-size:1.2rem; margin-top:1rem;"></p>
+            </form>
+        </div>
+
+        <div class="content about">
+            <h1>About</h1>
+            <p>Welcome to Dumble Fitness Club, your premier destination for fitness and wellness in Vasai. Our club is dedicated to helping you achieve your fitness goals with state-of-the-art equipment, expert trainers, and a supportive community.</p>
+            <p>Whether you're a beginner or a seasoned athlete, we have something for everyone. Join us today and take the first step towards a healthier, happier you!</p>
+        </div>
+
+        <div class="content contact">
+            <h1>Contact</h1>
+            <p>If you have any questions or would like to learn more about our services, please feel free to reach out to us:</p>
+            <ul>
+                <li>Email: <a href="mailto:fitness_club@gmail.com">fitness_club@gmail.com</a></li>
+                <li>Phone: <a href="tel:+1234567890">+1 234 567 890</a></li>
+                <li>Address: 123 Fitness St, Vasai, India</li>
+            </ul>
+            <p>We look forward to hearing from you!</p>
+        </div>
+    </div>
+
+    <footer class="foot">
+        &copy; 2023 Dumble Fitness Club. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,1 +1,1 @@
-﻿My HunarIntern Internships Tasks
+﻿My HunarIntern Internship Tasks
